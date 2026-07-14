@@ -1,7 +1,308 @@
-echo "# my-portfolio-site" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/zahraarsheen171-prog/my-portfolio-site.git
-git push -u origin main
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsheen Zahra | Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#4f46e5,#7c3aed);
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.profile{
+width:150px;
+height:150px;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+font-size:60px;
+font-weight:bold;
+color:#4f46e5;
+margin-bottom:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+header h1{
+font-size:42px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+}
+
+nav{
+background:#222;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+section{
+max-width:1000px;
+margin:50px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+h2{
+color:#4f46e5;
+margin-bottom:20px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.skill{
+background:#4f46e5;
+color:white;
+padding:10px 20px;
+border-radius:30px;
+font-size:15px;
+}
+
+.interests{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.interest{
+background:#7c3aed;
+color:white;
+padding:10px 20px;
+border-radius:30px;
+}
+
+.contact p{
+margin:12px 0;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#4f46e5;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#372fd1;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#222;
+color:white;
+margin-top:50px;
+}
+
+@media(max-width:700px){
+
+header h1{
+font-size:30px;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="profile">AZ</div>
+
+<h1>Arsheen Zahra</h1>
+
+<p>Computer Science Student | Future AI Developer | Web Developer</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#interests">Interests</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<div class="card">
+
+<h2>About Me</h2>
+
+<p>
+I am a 12th-grade Computer Science student with a strong passion for technology,
+Artificial Intelligence, coding, and web development.
+I enjoy learning new technologies and improving my programming skills.
+My goal is to build creative projects and gain experience in the IT industry.
+</p>
+
+</div>
+</section>
+
+<section id="education">
+<div class="card">
+
+<h2>Education</h2>
+
+<h3>Intermediate (12th Grade)</h3>
+
+<p><strong>College:</strong> Hussan Mussa College</p>
+
+<p><strong>Field:</strong> Computer Science</p>
+
+<p><strong>Expected Completion:</strong> 2026</p>
+
+</div>
+</section>
+
+<section id="skills">
+<div class="card">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">C++</div>
+
+<div class="skill">Web Development</div>
+
+<div class="skill">Logo Designing</div>
+
+<div class="skill">Poster Designing</div>
+
+<div class="skill">Internet Research</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="interests">
+<div class="card">
+
+<h2>Interests</h2>
+
+<div class="interests">
+
+<div class="interest">AI Learning</div>
+
+<div class="interest">Coding</div>
+
+<div class="interest">Technology</div>
+
+<div class="interest">Internet Research</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="card contact">
+
+<h2>Contact</h2>
+
+<p>📍 Quetta, Pakistan</p>
+
+<p>📞 03420686391</p>
+
+<p>📧 zahraarsheen171@gmail.com</p>
+
+<a href="mailto:zahraarsheen171@gmail.com" class="btn">Send Email</a>
+
+</div>
+</section>
+
+<footer>
+
+<p>© 2026 Arsheen Zahra | Portfolio Website</p>
+
+</footer>
+
+<script>
+
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+sections.forEach(section=>{
+section.style.opacity=0;
+section.style.transform="translateY(50px)";
+section.style.transition="1s";
+observer.observe(section);
+});
+
+</script>
+
+</body>
+</html>
