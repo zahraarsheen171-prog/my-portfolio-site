@@ -1,1 +1,21 @@
-v
+name: deploy to infinityfree
+
+on:
+push:
+branches:
+- main
+workflow_dispatch:
+
+jobs:
+deploy:
+name: deploy via FTP
+runs-on: ubuntu-latest code
+uses: actions/checkout@v4
+
+-name: deploy files via FTP
+uses: samkirkland/FTP-Dploy-Action@v4.3.5
+with:
+server: ${{ secrets.FTP_SERVER }}concurrency: 
+username: ${{ secrets.FTP_USERNAME }}
+password: ${{ secrets.FTP_PASSWORD }}
+server-dir: /htdocs/
