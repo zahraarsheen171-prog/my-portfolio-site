@@ -17,7 +17,7 @@ jobs:
       - name: deploy files via FTP
         uses: samkirkland/FTP-Dploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}concurrency: 
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /htdocs/
